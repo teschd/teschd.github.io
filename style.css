@@ -1,0 +1,259 @@
+/* Core Styling & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0b0e14;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header & Nav */
+.navbar {
+    background-color: rgba(11, 14, 20, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1e293b;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #6366f1;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 8rem 0 6rem 0;
+    text-align: center;
+    background: linear-gradient(180deg, #111827 0%, #0b0e14 100%);
+    border-bottom: 1px solid #1e293b;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background-color: #6366f1;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #4f46e5;
+}
+
+/* Games Section */
+.games-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background-color: #161f2e;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.game-thumb {
+    height: 200px;
+    background-color: #1e293b;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-dev {
+    background-color: #d97706;
+    color: #ffffff;
+}
+
+.status-released {
+    background-color: #059669;
+    color: #ffffff;
+}
+
+.game-info {
+    padding: 1.5rem;
+}
+
+.game-info h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.genre {
+    font-size: 0.85rem;
+    color: #6366f1;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.card-btn {
+    background-color: #1e293b;
+    color: #ffffff;
+    border: 1px solid #334155;
+    font-size: 0.85rem;
+}
+
+.card-btn:hover {
+    background-color: #334155;
+}
+
+.card-btn-secondary {
+    background-color: transparent;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.card-btn-secondary:hover {
+    color: #ffffff;
+}
+
+/* About & Footer */
+.about-section {
+    padding: 4rem 0;
+    background-color: #111827;
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.footer {
+    padding: 3rem 0;
+    background-color: #0b0e14;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.social-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #6366f1;
+}
