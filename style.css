@@ -1,3 +1,39 @@
+/* Container styling for layout */
+.game-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  padding: 8px 12px;
+  background: #1e1e1e;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* The core yellow dot styling */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Yellow color configuration with a soft glow effect */
+.status-dot.in-progress {
+  background-color: #f1c40f;
+  box-shadow: 0 0 8px rgba(241, 196, 15, 0.6);
+}
+
+.game-title {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.status-text {
+  font-size: 0.85rem;
+  color: #aaa;
+}
 /* Core Styling & Reset */
 * {
     margin: 0;
