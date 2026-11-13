@@ -62,18 +62,21 @@
   color: #aaa;
 }
 
-/* Scaled-down image styling */
+/* Container for the image inside the card */
 .game-image-container {
   width: 100%;
-  height: 140px; /* Controls the scaled height */
-  border-radius: 4px;
+  height: 180px; /* Adjust this to your preferred height */
   overflow: hidden;
+  border-top-left-radius: 8px; /* Match card rounding if at the top */
+  border-top-right-radius: 8px;
 }
 
+/* The actual image tag */
 .game-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image scales nicely without distortion */
+  object-fit: cover; /* Crops and scales the image to fill the box without distortion */
+  display: block;
 }
 /* The core yellow dot styling */
 .status-dot {
