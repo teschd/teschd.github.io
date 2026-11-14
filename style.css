@@ -208,7 +208,73 @@ nav a:hover {
     max-width: 600px;
     margin: 0 auto 2rem auto;
 }
+.projects-section {
+  background-color: #16171a;
+  color: #ffffff;
+  padding: 4rem 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
 
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+/* Stacks projects vertically with consistent spacing */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem; /* Automatic spacing between replicated games */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* The contained card for each individual game */
+.project-card {
+  width: 100%;
+  background-color: #1e2024; /* Subtle contrast against the dark background */
+  border: 1px solid #2d3036;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-header {
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+}
+
+.project-status {
+  display: block;
+  color: #c4c7ce;
+  font-size: 1rem;
+}
+
+/* Responsive 16:9 container for the YouTube embed */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /* Buttons */
 .btn {
     display: inline-block;
