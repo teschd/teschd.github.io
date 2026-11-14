@@ -8,6 +8,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles for the glowing status indicator (Feel free to move this to your style.css) -->
+    <style>
+        .project-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ffd000;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #ffd000, 0 0 16px rgba(255, 208, 0, 0.6);
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 8px #ffd000, 0 0 16px rgba(255, 208, 0, 0.6);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 0 4px #ffd000, 0 0 8px rgba(255, 208, 0, 0.3);
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -34,59 +64,35 @@
     </section>
 
     <!-- Featured Games Section -->
-    <center>
-    <section id="games" class="games-section">
+    <section id="games" class="projects-section">
         <div class="container">
             <h2 class="section-title">Our Projects</h2>
-            <h3>Kart Overdrive</h3> - In Development<br><br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2ENr6G8Nm2o?si=tUIMEP7ONpojezW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <header class="project-header">
+                        <h3 class="project-title">Kart Overdrive</h3>
+                        <span class="project-status">
+                            <span class="status-dot"></span> In Development
+                        </span>
+                    </header>
+                    
+                    <div class="video-wrapper">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/2ENr6G8Nm2o?si=tUIMEP7ONpojezW4" 
+                            title="Kart Overdrive beta sneak peek" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
-    </center>
-
-    <section class="projects-section">
-  <h2 class="section-title">Our Projects</h2>
-
-  <div class="projects-grid">
-    
-    <!-- START: Copy & paste this entire block for each new game -->
-    <article class="project-card">
-      <header class="project-header">
-        <h3 class="project-title">Kart Overdrive</h3>
-        <span class="project-status">- In Development</span>
-      </header>
-      
-      <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube.com/embed/2ENr6G8Nm2o?si=tUIMEP7ONpojezW4" 
-          title="Kart Overdrive beta sneak peek" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </article>
-    <!-- END: Project block -->
-
-    <!-- Example of a second replicated game -->
-    <article class="project-card">
-      <header class="project-header">
-        <h3 class="project-title">Next Game Title</h3>
-        <span class="project-status">- Coming Soon</span>
-      </header>
-      
-      <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID" 
-          title="Next Game Trailer" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </article>
-
-  </div>
-</section>
     
     <!-- About Section -->
     <section id="about" class="about-section">
@@ -111,7 +117,8 @@
         <div class="container footer-content">
             <p>&copy; 2026 Aetheria Interactive. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://youtube.com" target="https://www.youtube.com/@AetheriaInteractive" rel="noopener">YouTube</a>
+                <!-- Fixed the YouTube link so it points directly to your channel in a new tab -->
+                <a href="https://www.youtube.com/@AetheriaInteractive" target="_blank" rel="noopener">YouTube</a>
             </div>
         </div>
     </footer>
