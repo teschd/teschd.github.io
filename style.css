@@ -4,10 +4,20 @@
             gap: 8px;
         }
 
-        .status-dot {
+        .status-dot-w {
             width: 10px;
             height: 10px;
             background-color: #ffd000;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #ffd000, 0 0 16px rgba(255, 208, 0, 0.6);
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+
+.status-dot-k {
+            width: 10px;
+            height: 10px;
+            background-color: #0FFF50;
             border-radius: 50%;
             display: inline-block;
             box-shadow: 0 0 8px #ffd000, 0 0 16px rgba(255, 208, 0, 0.6);
